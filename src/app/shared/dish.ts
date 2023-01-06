@@ -1,3 +1,6 @@
+//import {MatCard}  from "@angular/material";
+import {Comment} from './comment';
+
 export class Dish {
     id: string;
     name: string;
@@ -7,4 +10,5 @@ export class Dish {
     label: string;
     price: string;
     description: string;
+    comments: Comment[];    //typein..
 }
