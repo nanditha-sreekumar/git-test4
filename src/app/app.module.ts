@@ -12,7 +12,9 @@ import { AppComponent } from './app.component';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
-import { DishdetailComponent } from './dishdetail/dishdetail.component';                                                            
+import { DishdetailComponent } from './dishdetail/dishdetail.component';    
+
+import { DishService } from './services/dish.service';     //typein
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     MatCardModule,                                                   
     MatButtonModule                                                                                               
   ],
-  providers: [],
+  providers: [
+    DishService                                             //typein
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

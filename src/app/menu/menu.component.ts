@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';  
-import { DISHES} from '../shared/dishes';  //typein
+import { DishService } from '../services/dish.service';  //typein
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {                
+export class MenuComponent implements OnInit {           
 
-  dishes: Dish[] = DISHES;
+  dishes: Dish[];
 
   selectedDish: Dish;
 
-constructor() { }
-
-ngOnInit() {
-}
+  constructor(private dishService: DishService) { }      //typein
+  
+  ngOnInit() {                                           //typein
+    this.dishes = this.dishService.getDishes();
+  }
 
 onSelect(dish:Dish){
-  this.selectedDish = dish;    //typein..
+  this.selectedDish = dish;    
 }
 
 }

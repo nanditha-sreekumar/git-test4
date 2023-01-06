@@ -1,5 +1,4 @@
-//import {MatCard}  from "@angular/material";
-import {Comment} from './comment';
+import {Comment} from './comment'; //typein..
 
 export class Dish {
     id: string;
