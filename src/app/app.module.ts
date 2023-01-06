@@ -13,10 +13,16 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';    
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';  
+
 
 import { DishService } from './services/dish.service';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';     //typein
+
+import { AppRoutingModule } from './app-routing/app-routing.module';   //typein
 
 @NgModule({
   declarations: [
@@ -25,12 +31,16 @@ import { FooterComponent } from './footer/footer.component';     //typein
     DishdetailComponent,
     HeaderComponent,
     FooterComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,                                                   
     MatToolbarModule,                                                          
     FlexLayoutModule,
+    AppRoutingModule,                                                  //typein
     MatListModule,
     MatGridListModule,
     MatCardModule,                                                   
