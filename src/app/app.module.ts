@@ -21,7 +21,7 @@ import { HomeComponent } from './home/home.component';
 
 
 import { DishService } from './services/dish.service';
-import { PromotionService } from './services/promotion.service';      //typein
+import { PromotionService } from './services/promotion.service';      
 
 import { AppRoutingModule } from './app-routing/app-routing.module';   
 
@@ -49,7 +49,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
   ],
   providers: [
     DishService,
-    PromotionService                 //typein                                     
+    PromotionService                                                      
   ],
   bootstrap: [AppComponent]
 })

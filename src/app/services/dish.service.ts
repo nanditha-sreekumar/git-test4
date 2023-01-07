@@ -13,11 +13,11 @@ export class DishService {
     return DISHES;
   }
 //arrow function
-  getDish(id: string): Dish {                            //typein
+  getDish(id: string): Dish {                            
     return DISHES.filter((dish) => (dish.id === id))[0];
   }
 
-  getFeaturedDish(): Dish {                              //typein
+  getFeaturedDish(): Dish {                              
     return DISHES.filter((dish) => dish.featured)[0];
   }
 }
