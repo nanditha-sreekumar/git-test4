@@ -21,8 +21,9 @@ import { HomeComponent } from './home/home.component';
 
 
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service';      //typein
 
-import { AppRoutingModule } from './app-routing/app-routing.module';   //typein
+import { AppRoutingModule } from './app-routing/app-routing.module';   
 
 @NgModule({
   declarations: [
@@ -40,14 +41,15 @@ import { AppRoutingModule } from './app-routing/app-routing.module';   //typein
     BrowserAnimationsModule,                                                   
     MatToolbarModule,                                                          
     FlexLayoutModule,
-    AppRoutingModule,                                                  //typein
+    AppRoutingModule,                                                  
     MatListModule,
     MatGridListModule,
     MatCardModule,                                                   
     MatButtonModule                                                                                               
   ],
   providers: [
-    DishService                                             //typein
+    DishService,
+    PromotionService                 //typein                                     
   ],
   bootstrap: [AppComponent]
 })
