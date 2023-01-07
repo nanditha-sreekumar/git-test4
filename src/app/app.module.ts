@@ -5,7 +5,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';   
 import { MatGridListModule } from '@angular/material/grid-list';   
 import { MatCardModule } from '@angular/material/card';              
-import { MatButtonModule } from '@angular/material/button';          
+import { MatButtonModule } from '@angular/material/button';        
+import { MatDialogModule } from '@angular/material/dialog';             //typein
 import { FlexLayoutModule } from '@angular/flex-layout';                        
 
 import { AppComponent } from './app.component';
@@ -22,11 +23,10 @@ import { HomeComponent } from './home/home.component';
 
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';   
-import { LeaderService } from './services/leader.service';             //typein
+import { LeaderService } from './services/leader.service';             
 
-
-import { AppRoutingModule } from './app-routing/app-routing.module';   
-
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { LoginComponent } from './login/login.component';   
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +37,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AboutComponent,
     ContactComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,13 +48,19 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatListModule,
     MatGridListModule,
     MatCardModule,                                                   
-    MatButtonModule                                                                                               
+    MatButtonModule,
+    MatDialogModule                //typein                                                                                              
   ],
   providers: [
     DishService,
     PromotionService,
-    LeaderService                  //typein                                                     
+    LeaderService                                                                     
   ],
+
+  entryComponents: [               //typein
+    LoginComponent
+],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

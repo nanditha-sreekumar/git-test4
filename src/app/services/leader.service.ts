@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Leader } from '../shared/leader';   //typein
-import { LEADERS } from '../shared/leaders'; //typein
+import { Leader } from '../shared/leader';   
+import { LEADERS } from '../shared/leaders'; 
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class LeaderService {
 
   	constructor() { }
 
-	getLeaders():Leader[] {                    //typein
+	getLeaders():Leader[] {                    
 		return LEADERS;
 	}
 
