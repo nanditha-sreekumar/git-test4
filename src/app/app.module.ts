@@ -6,8 +6,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';   
 import { MatCardModule } from '@angular/material/card';              
 import { MatButtonModule } from '@angular/material/button';        
-import { MatDialogModule } from '@angular/material/dialog';             //typein
-import { FlexLayoutModule } from '@angular/flex-layout';                        
+import { MatDialogModule } from '@angular/material/dialog';  
+import { MatFormFieldModule } from '@angular/material/form-field';  //typein
+import { MatInputModule } from '@angular/material/input';           //typein
+import { MatCheckboxModule } from '@angular/material/checkbox';     //typein
+import { FlexLayoutModule } from '@angular/flex-layout';       
+import { FormsModule } from '@angular/forms';                       //typein
+
 
 import { AppComponent } from './app.component';
 
@@ -44,12 +49,16 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,                                                   
     MatToolbarModule,                                                          
     FlexLayoutModule,
+    FormsModule,           //typein
     AppRoutingModule,                                                  
     MatListModule,
     MatGridListModule,
     MatCardModule,                                                   
     MatButtonModule,
-    MatDialogModule                //typein                                                                                              
+    MatDialogModule,
+    MatFormFieldModule,     //typein
+    MatInputModule,         //typein
+    MatCheckboxModule       //typein                                                                                              
   ],
   providers: [
     DishService,
@@ -57,7 +66,7 @@ import { LoginComponent } from './login/login.component';
     LeaderService                                                                     
   ],
 
-  entryComponents: [               //typein
+  entryComponents: [               
     LoginComponent
 ],
 
