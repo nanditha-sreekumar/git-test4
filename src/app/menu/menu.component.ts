@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';  
-import { DishService } from '../services/dish.service';  //typein
+import { DishService } from '../services/dish.service';  
 
 @Component({
   selector: 'app-menu',
@@ -13,9 +13,10 @@ export class MenuComponent implements OnInit {
 
   selectedDish: Dish;
 
-  constructor(private dishService: DishService) { }      //typein
+  constructor(private dishService: DishService) { }      
   
-  ngOnInit() {                                           //typein
+  ngOnInit() {        
+ //if  the promise is resolved correctly then resolve will be called and the result will be delivered in .then()                    
     this.dishService.getDishes()
     .then((dishes) => this.dishes = dishes);    
 

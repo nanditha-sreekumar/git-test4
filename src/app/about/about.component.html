@@ -70,6 +70,10 @@
 
 		</mat-list-item>
 	</mat-list>
+  <!--this displays loading until the page is loaded after 2 sec-->
+	<div [hidden]="leaders">                                            
+		<mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+	</div>
 
   </div>
 </div>
