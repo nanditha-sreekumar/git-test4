@@ -17,7 +17,6 @@ export class ContactComponent implements OnInit {
   //for reseting the form to initial value    
   @ViewChild('fform') feedbackFormDirective;   
   
-  //typein.. 
 
   formErrors = {
     'firstname': '',
@@ -26,8 +25,7 @@ export class ContactComponent implements OnInit {
     'email': ''
   };
  
-  //typein.. 
-
+   
   validationMessages = {
     'firstname': {
       'required':      'First Name is required.',
@@ -71,10 +69,10 @@ export class ContactComponent implements OnInit {
     this.feedbackForm.valueChanges
       .subscribe(data => this.onValueChanged(data));
       // (re)set validation messages now
-    this.onValueChanged();                 //typein
+    this.onValueChanged();                 
   }
 
-  //typein..
+  
 
   onValueChanged(data?: any) {
     if (!this.feedbackForm) { return; }
