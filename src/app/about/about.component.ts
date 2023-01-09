@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   //if  the promise is resolved correctly then resolve will be called and the result will be delivered in .then()                    		
     this.leaderService.getLeaders()   
-    .then((leaders) => this.leaders = leaders);     
+    .subscribe((leaders) => this.leaders = leaders);     
 
   }
 

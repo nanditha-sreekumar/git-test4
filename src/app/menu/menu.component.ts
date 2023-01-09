@@ -16,9 +16,9 @@ export class MenuComponent implements OnInit {
   constructor(private dishService: DishService) { }      
   
   ngOnInit() {        
- //if  the promise is resolved correctly then resolve will be called and the result will be delivered in .then()                    
+ //.subscribe instead of .then                  
     this.dishService.getDishes()
-    .then((dishes) => this.dishes = dishes);    
+    .subscribe((dishes) => this.dishes = dishes);    
 
   }
 
