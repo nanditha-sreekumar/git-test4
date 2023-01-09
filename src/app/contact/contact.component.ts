@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
+import { formControlBinding } from '@angular/forms/src/directives/ng_model';
+import { Feedback, ContactType } from '../shared/feedback';          
+
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +11,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  feedbackForm: FormGroup;          
+  feedback: Feedback;              
+  contactType = ContactType;  
+  //for reseting the form to initial value    
+  @ViewChild('fform') feedbackFormDirective;  //typein  
+
+  constructor(private fb: FormBuilder) {   
+    this.createForm();
+   }
 
   ngOnInit() {
   }
 
+  createForm() {                            
+    this.feedbackForm = this.fb.group({     
+      firstname: ['', Validators.required],   //typein
+      lastname: ['', Validators.required],    //typein
+      telnum: [0, Validators.required],       //typein
+      email: ['', Validators.required],       //typein
+      agree: false,
+      contacttype: 'None',
+      message: ''
+    });
+  }
+
+  onSubmit() {                               
+    this.feedback = this.feedbackForm.value;
+    console.log(this.feedback);
+    this.feedbackForm.reset({                 //typein
+      firstname: '',
+      lastname: '',
+      telnum: '',
+      email: '',
+      agree: false,
+      contacttype: 'None',
+      message: ''
+    });
+    this.feedbackFormDirective.resetForm();   //typein
+  } 
 }
