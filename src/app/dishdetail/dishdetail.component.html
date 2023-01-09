@@ -24,8 +24,8 @@
 			</mat-card-content>
 
 			<mat-card-actions>
-
-				<button mat-button [routerLink]="['/dishdetail', prev]">  <!--typein-->
+                 <!--buttons to move to next and prev dishes-->
+				<button mat-button [routerLink]="['/dishdetail', prev]">  
 					<span class="fa fa-chevron-left fa-lg"></span>
 				</button>
 
@@ -33,7 +33,7 @@
 				<button mat-button>LIKE</button>
 				<button mat-button>SHARE</button>
 
-				<span class="flex-spacer"></span>                          <!--typein-->
+				<span class="flex-spacer"></span>                          
                 <button mat-button [routerLink]="['/dishdetail', next]">
 					<span class="fa fa-chevron-right fa-lg"></span>
 				</button>

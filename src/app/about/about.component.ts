@@ -15,7 +15,6 @@ export class AboutComponent implements OnInit {
   constructor(private leaderService: LeaderService) { }   
 
   ngOnInit() {
-  //if  the promise is resolved correctly then resolve will be called and the result will be delivered in .then()                    		
     this.leaderService.getLeaders()   
     .subscribe((leaders) => this.leaders = leaders);     
 
