@@ -15,8 +15,7 @@ export class ContactComponent implements OnInit {
   feedback: Feedback;              
   contactType = ContactType;  
   //for reseting the form to initial value    
-  @ViewChild('fform') feedbackFormDirective;  //typein  
-
+  @ViewChild('fform') feedbackFormDirective;    
   constructor(private fb: FormBuilder) {   
     this.createForm();
    }
@@ -26,10 +25,10 @@ export class ContactComponent implements OnInit {
 
   createForm() {                            
     this.feedbackForm = this.fb.group({     
-      firstname: ['', Validators.required],   //typein
-      lastname: ['', Validators.required],    //typein
-      telnum: [0, Validators.required],       //typein
-      email: ['', Validators.required],       //typein
+      firstname: ['', Validators.required],   
+      lastname: ['', Validators.required],    
+      telnum: [0, Validators.required],       
+      email: ['', Validators.required],       
       agree: false,
       contacttype: 'None',
       message: ''
@@ -39,7 +38,7 @@ export class ContactComponent implements OnInit {
   onSubmit() {                               
     this.feedback = this.feedbackForm.value;
     console.log(this.feedback);
-    this.feedbackForm.reset({                 //typein
+    this.feedbackForm.reset({                 
       firstname: '',
       lastname: '',
       telnum: '',
@@ -48,6 +47,6 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     });
-    this.feedbackFormDirective.resetForm();   //typein
+    this.feedbackFormDirective.resetForm();   
   } 
 }
